@@ -39,7 +39,7 @@ pipeline {
         stage('Docker Build & Push') {                 # the application will build as a Docker image and then it will be pushed to Dockerhub       
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'e8442a03-f89f-46d7-853e-ca9d84d501d0', toolName: 'java-project') {
+                    withDockerRegistry(credentialsId: 'DOCKER_CRED', toolName: 'docker') {
                         sh "docker build -t java-project -f docker/Dockerfile ."
                         sh "docker tag java-project karan143/java-project:latest"
                         sh "docker push karan143/java-project:latest"
