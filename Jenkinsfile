@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Git Checkout') {                   # checks out the code from the Git repository 
             steps {
-                git branch: 'main', url: 'https://github.com/itkarank/java-project.git'
+                git branch: 'main3', url: 'https://github.com/itkarank/java-project.git'
             }
         }
         
@@ -24,9 +24,9 @@ pipeline {
         
         stage('Sonarqube Analysis') {               # static code analysis using SonarQube
             steps {
-                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://54.159.121.84:9000/ -Dsonar.login=squ_74bfb21266469eaf271d83e5f123820d19b38f13 -Dsonar.projectName=Shopping-Cart \
+                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://44.223.76.98:9000/ -Dsonar.login=squ_squ_ac48af98da172db0fcb1276edaa4a446d0608f2a -Dsonar.projectName=java-project \
                    -Dsonar.java.binaries=. \
-                   -Dsonar.projectKey=Shopping-Cart '''
+                   -Dsonar.projectKey=java-project '''
             }
         }
         
