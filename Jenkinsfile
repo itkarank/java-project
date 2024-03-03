@@ -24,9 +24,9 @@ pipeline {
         
         stage('Sonarqube Analysis') {               // static code analysis using SonarQube     
             steps {
-                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://44.223.76.98:9000/ -Dsonar.login=squ_34de170a274924cf5cf19c9ac0c90563d8a8a87c -Dsonar.projectName=java-project \
+                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://44.223.76.98:9000/ -Dsonar.login=squ_34de170a274924cf5cf19c9ac0c90563d8a8a87c -Dsonar.projectName=java-project1 \
                    -Dsonar.java.binaries=. \
-                   -Dsonar.projectKey=java-project '''
+                   -Dsonar.projectKey=java-project1 '''
             }
         }
         
