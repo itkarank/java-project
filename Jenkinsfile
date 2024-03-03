@@ -10,7 +10,7 @@ pipeline {
     }
     
     stages {
-        stage('Git Checkout') {                   # checks out the code from the Git repository 
+        stage('Git Checkout') {                   
             steps {
                 git branch: 'main3', url: 'https://github.com/itkarank/java-project.git'
             }
