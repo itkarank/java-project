@@ -1,21 +1,19 @@
-# CONFIGURATION MANAGEMENT USING [ANSIBLE]
+# PROVISIONSING AWS INFRASTRUCTURE USING [TERRAFORM]
 
-# INSTALLED
+# VIRTUAL SERVER [EC2]
 
-* DOCKER on both servers
-* JAVA on both servers
-* JENKINS on CI/CD server
+* I've provisioned two EC2 instances named production-server and CI/CD-server.
+  production-server is likely intended to serve as a production environment for hosting application.
+  CI/CD-server is presumably designated for continuous integration and continuous deployment (CI/CD) tasks, such as building, testing, and deploying application.
 
-# STARTED AND ENABLED
+# VIRTUAL NETWORK [VPC]
 
- * DOCKER
- * JENKINS
+* created a VPC and subnets and internet gateway and route tables for ec2 instances.
+  Then associated IGW with VPC and i have done subnet association.
 
-# PULLING DOCKER IMAGE AND DEPLOYING CONATINER
+# VIRTUAL FIREWALL [security group]
 
-* Pulled a SONARQUBE image
-* And deployed the sonarqube image as container
-* with 9000 port on CI/CD server
+* created a security group for ec2 instaces.
 
 
-                                                * * *   PLEASE OPEN THE NEXT BRANCH  * * *
+                                        * * *   PLEASE OPEN THE NEXT BRANCH  * * *
